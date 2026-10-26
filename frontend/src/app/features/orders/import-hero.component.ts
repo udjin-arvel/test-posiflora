@@ -47,7 +47,7 @@ import { FIXTURE_RECORD_COUNT, FIXTURES, type FixtureVariant } from '../../core/
 
       <button
         type="button"
-        class="mt-5 inline-flex h-14 w-full items-center justify-center gap-2 rounded-2xl bg-primary px-8 text-lg font-semibold text-primary-foreground shadow-cta transition-transform active:scale-[0.98] disabled:opacity-60 sm:w-auto sm:min-w-[340px]"
+        class="cursor-pointer mt-5 inline-flex h-14 w-full items-center justify-center gap-2 rounded-2xl bg-primary px-8 text-lg font-semibold text-primary-foreground shadow-cta transition-transform active:scale-[0.98] disabled:opacity-60 sm:w-auto sm:min-w-[340px]"
         [disabled]="pending()"
         [attr.aria-busy]="pending()"
         (click)="import.emit()"
@@ -63,7 +63,7 @@ import { FIXTURE_RECORD_COUNT, FIXTURES, type FixtureVariant } from '../../core/
       <div class="mt-3">
         <button
           type="button"
-          class="text-sm font-medium text-primary disabled:opacity-50"
+          class="cursor-pointer text-sm font-medium text-primary disabled:opacity-50"
           [disabled]="pending()"
           (click)="parallelImport.emit()"
         >
