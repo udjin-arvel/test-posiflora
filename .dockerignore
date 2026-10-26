@@ -1,0 +1,4 @@
+.project
+frontend/node_modules
+backend/var
+.git
