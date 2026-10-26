@@ -24,4 +24,9 @@ fi
 
 php bin/console doctrine:migrations:migrate --no-interaction
 
+php bin/ensure-test-database.php
+
+php bin/console doctrine:database:create --if-not-exists --env=test --no-interaction
+php bin/console doctrine:migrations:migrate --no-interaction --env=test
+
 exec docker-php-entrypoint "$@"

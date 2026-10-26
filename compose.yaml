@@ -8,6 +8,7 @@ services:
       MYSQL_PASSWORD: posiflora
     volumes:
       - db_data:/var/lib/mysql
+      - ./docker/mysql/init-test-db.sql:/docker-entrypoint-initdb.d/01-test-db.sql:ro
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uroot", "-proot"]
       interval: 5s
