@@ -33,7 +33,7 @@ import { FIXTURE_RECORD_COUNT, FIXTURES, type FixtureVariant } from '../../core/
             type="button"
             role="radio"
             [attr.aria-checked]="key === variant()"
-            class="rounded-xl px-3 py-2.5 text-left transition-colors"
+            class="cursor-pointer rounded-xl px-3 py-2.5 text-left transition-colors"
             [class.bg-card]="key === variant()"
             [class.shadow-card]="key === variant()"
             [class.text-muted-foreground]="key !== variant()"
